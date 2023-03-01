@@ -4,10 +4,10 @@ CelebMatch is a web application that uses computer vision and machine learning a
 ## Installation
 To install CelebMatch, follow these steps:
 
-Clone the repository to your local machine.
-Install the required dependencies using pip install -r requirements.txt.
-Run the application using python manage.py runserver.
-Navigate to http://localhost:8000 in your web browser to use the application.
+#### Clone the repository to your local machine.
+#### Install the required dependencies using pip install -r requirements.txt.
+#### Run the application using python manage.py runserver.
+#### Navigate to http://localhost:8000 in your web browser to use the application.
 
 ## Usage
 To use CelebMatch, follow these steps:
