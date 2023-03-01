@@ -1,0 +1,39 @@
+{% extends 'detect_image/base.html' %}
+{% load static %}
+
+{% block title%}Home{% endblock title%}
+{% block content %}
+<div>
+<div class="text-white mt-5 text-justify mx-5">
+    <div class="text-center">
+        <h1>Using the art of algorithm, find out which celebrity do you look like?</h1>
+    </div>
+
+	<div class="parent" style="line-height: 2rem">
+        <form action='#' id="upload-form">
+            {% csrf_token %}
+            <div class="file-upload">
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                    <div class="drag-text">
+                        <h4>Drag and drop a file or click here</h4>
+                    </div>
+                </div>
+    
+                <div class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="your image" width="150" height="150" />
+                    <div class="image-title-wrap">
+                        <a onclick="removeUpload()" class="btn btn-outline-danger my-3 mr-5">Remove</a>
+	                    <a onclick="predict()" class="btn btn-outline-info my-3">Predict</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="file-predicted-content">
+            <img class="file-predicted-image" id="predicted_img" width="150" height="150" src="#" alt="your image" />
+            <span class="mx-1" id="predicted_img_label"></span>
+        </div>
+	</div>
+</div>
+</div>
+{% endblock content %}
